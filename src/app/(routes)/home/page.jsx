@@ -22,11 +22,11 @@ function Homepage() {
   }, []);
 
   return (
-    <div className='w-full'>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-4 p-4'>
+    <div className='w-full bg-white'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-4 p-4 bg-white'>
         {posts.length > 0 ? (
           posts.map((post) => (
-            <div key={post.id} className='border-[1px] rounded-lg p-3 cursor-pointer hover:shadow-sm transition-all ease-in-out'>
+            <div key={post.id} className='border-[1px] rounded-lg p-3 cursor-pointer hover:shadow-sm transition-all bg-white text-black ease-in-out'>
               <img
                 src={post.imageurl}
                 alt='img'
@@ -51,7 +51,7 @@ function Homepage() {
                 <h2 className='text-gray-500 text-sm'>{post.content.substring(0, 70)}...</h2>
 
                 <Link href={`/singelpostpage/${post.documentId}`} className='w-full'>
-                  <h2 className='p-2 text-whites px-3 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white'>
+                  <h2 className='p-2 text-black px-3 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white'>
                     Read More
                   </h2>
                 </Link>

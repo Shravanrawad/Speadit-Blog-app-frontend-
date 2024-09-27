@@ -72,7 +72,7 @@ const ProfilePage = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center space-y-3 p-5">
+      <div className="flex flex-col items-center space-y-3 p-5 bg-white text-black">
         <img
           src={user?.imageUrl}
           alt="Profile"
