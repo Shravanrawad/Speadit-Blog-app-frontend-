@@ -51,7 +51,7 @@ function Homepage() {
                 <h2 className='text-gray-500 text-sm'>{post.content.substring(0, 70)}...</h2>
 
                 <Link href={`/singelpostpage/${post.documentId}`} className='w-full'>
-                  <h2 className='p-2 text-white px-3 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white'>
+                  <h2 className='p-2 text-whites px-3 border-[1px] border-primary text-primary rounded-full w-full text-center text-[11px] mt-2 cursor-pointer hover:bg-primary hover:text-white'>
                     Read More
                   </h2>
                 </Link>

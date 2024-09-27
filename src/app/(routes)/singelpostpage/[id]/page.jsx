@@ -37,6 +37,9 @@ function SinglePostPage({ params }) {
   const [loading, setLoading] = useState(true);
 
   React.useEffect(() => {
+   
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
     const fetchData = async () => {
       const { post, allPosts } = await fetchPostAndOthers(id);
       setPostData(post);
@@ -44,9 +47,9 @@ function SinglePostPage({ params }) {
       setLoading(false);
     };
     fetchData();
-  }, [id]);
+  }, [id]); 
 
-  const handelsavepost = async (post) => {
+  const handleSavePost = async (post) => {
     if (!user) {
       toast('Please log in to save posts.');
       return;
@@ -121,7 +124,7 @@ function SinglePostPage({ params }) {
           </div>
           <p className="mt-2"><strong>Publish on:</strong> {new Date(postData.publishedAt).toLocaleDateString()}</p>
           <div className='flex items-center gap-2 mt-2'>
-            <Button onClick={() => handelsavepost(postData)} variant='outline' className=' rounded-full flex gap-2 items-center'>
+            <Button onClick={() => handleSavePost(postData)} variant='outline' className=' rounded-full flex gap-2 items-center'>
               <SaveIcon className='h-4 w-4'/>Save
             </Button>
             <Button onClick={handleSharePost} variant='outline' className=' rounded-full flex gap-2 items-center'>
