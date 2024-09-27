@@ -28,7 +28,7 @@ function Header() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch('http://localhost:1337/api/posts'); 
+                const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/posts`);
                 const data = await response.json();
                 setPosts(data.data);
             } catch (error) {
@@ -118,7 +118,7 @@ function Header() {
                                                 </h1>
                                             </Link>
 
-                                            <div className="space-y-1">
+                                            {isSignedIn ? (<div className="space-y-1">
                                                 {routes?.map(item => (
                                                     <Link
                                                         href={item.href}
@@ -132,7 +132,13 @@ function Header() {
                                                         </div>
                                                     </Link>
                                                 ))}
-                                            </div>
+                                            </div>) : 
+                                                 (<div className="flex items-center gap-1">
+                                                    <Link href="/sign-in"><Button className="rounded-full bg-popover border border-zinc-100">SignIn</Button></Link>
+                                                    <Link href="/sign-up"><Button className="rounded-full border border-zinc-100">Get Started</Button></Link>
+                                                </div>) 
+                                            }
+
                                         </div>
                                     </div>
                                 </SheetContent>
@@ -152,6 +158,7 @@ function Header() {
                         </div>
                     )}
                 </div>
+
             </div>
             {showsearch && mobileInputValue.length > 0 && <Mobilesearch mobileInputValue={mobileInputValue} setMobileInputValue={setMobileInputValue} posts={posts} setShowSearch={setShowSearch} />}
         </>
