@@ -126,14 +126,14 @@ function Header() {
                                                         className="text-sm group flex p-3 w-full justify-start font-medium cursor-pointer hover:text-white hover:bg-white/10 rounded-lg transition"
                                                         onClick={handleLinkClick}
                                                     >
-                                                        <div className="flex items-center flex-1">
+                                                        <div className="flex items-center text-black flex-1">
                                                             <item.icon className="h-5 w-5 mr-3" />
                                                             {item.label}
                                                         </div>
                                                     </Link>
                                                 ))}
                                             </div>) : 
-                                                 (<div className="flex items-center gap-1">
+                                                 (<div className="flex items-center gap-1 text-black">
                                                     <Link href="/sign-in"><Button className="rounded-full bg-popover border border-zinc-100">SignIn</Button></Link>
                                                     <Link href="/sign-up"><Button className="rounded-full border border-zinc-100">Get Started</Button></Link>
                                                 </div>) 
@@ -148,9 +148,9 @@ function Header() {
                         </div>
                     ) : (
                         <div className="flex justify-between shadow-sm items-center gap-2 p-3 w-full">
-                            <ArrowLeft onClick={() => setShowSearch(false)} />
+                            <ArrowLeft className='text-black' onClick={() => setShowSearch(false)} />
                             <Input
-                                className="rounded-full"
+                                className="rounded-full text-black"
                                 placeholder="Search Blog ..."
                                 value={mobileInputValue}
                                 onChange={(e) => setMobileInputValue(e.target.value)}

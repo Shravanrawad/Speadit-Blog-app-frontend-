@@ -24,7 +24,7 @@ function Mobilesearch({ mobileInputValue, setMobileInputValue, posts , setShowSe
                 <div onClick={() => {
                   setMobileInputValue('')
                   setShowSearch(false)
-                }} className='flex items-center gap-2 hover:bg-gray-100 p-2'>
+                }} className='flex items-center gap-2 text-black hover:bg-gray-100 p-2'>
                   <SearchIcon className='h-4 w-4' />
                   {post.title}
                 </div>
