@@ -58,7 +58,7 @@ function Header() {
                 <div className="hidden lg:flex w-full p-2">
                     <div className="flex w-full items-center justify-between">
                         <Link href="/home">
-                            <h1 className="text-2xl font-sans">Spread<strong className="text-sky-500">It</strong></h1>
+                            <h1 className="text-2xl font-sans text-black">Spread<strong className="text-sky-500">It</strong></h1>
                         </Link>
 
                         <div className="w-[500px] flex items-center border border-zinc-100 rounded-full relative px-3">
@@ -88,7 +88,7 @@ function Header() {
                         </div>
 
                         {isSignedIn ? (
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-4 text-black">
                                 <Link href="/home"><HomeIcon className="h-6 w-6" /></Link>
                                 <Link href="/createpost"><PlusCircleIcon className="h-6 w-6" /></Link>
                                 <Link href="/profile"><UserIcon className="h-6 w-6" /></Link>
@@ -107,13 +107,13 @@ function Header() {
                         <div className="flex justify-between items-center p-3 w-full">
                             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                                 <SheetTrigger onClick={() => setIsOpen(true)}>
-                                    <MenuIcon />
+                                    <MenuIcon className='text-black' />
                                 </SheetTrigger>
                                 <SheetContent side="left" className="p-0">
                                     <div className="space-y-4 py-4 flex flex-col h-full bg-white">
                                         <div className="px-3 py-2 flex-1">
                                             <Link href="/home" className="flex items-center pl-3 mb-14" onClick={handleLinkClick}>
-                                                <h1 className="text-2xl font-bold text-white">
+                                                <h1 className="text-2xl font-bold text-black">
                                                     Spread<strong className="text-sky-500">It</strong>
                                                 </h1>
                                             </Link>
@@ -143,8 +143,8 @@ function Header() {
                                     </div>
                                 </SheetContent>
                             </Sheet>
-                            <h1 className="font-sans">Spread<strong className="text-sky-500">It</strong></h1>
-                            <SearchIcon onClick={() => setShowSearch(true)} />
+                            <h1 className="font-sans text-black">Spread<strong className="text-sky-500">It</strong></h1>
+                            <SearchIcon className='text-black' onClick={() => setShowSearch(true)} />
                         </div>
                     ) : (
                         <div className="flex justify-between shadow-sm items-center gap-2 p-3 w-full">
