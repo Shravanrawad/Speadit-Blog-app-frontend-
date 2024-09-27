@@ -26,7 +26,7 @@ function Mobilesearch({ mobileInputValue, setMobileInputValue, posts , setShowSe
                   setShowSearch(false)
                 }} className='flex items-center gap-2 text-black hover:bg-gray-100 p-2'>
                   <SearchIcon className='h-4 w-4' />
-                  {post.title}
+                  <>{post.title.substring(0, 40)}...</>
                 </div>
               </Link>
             </div>
