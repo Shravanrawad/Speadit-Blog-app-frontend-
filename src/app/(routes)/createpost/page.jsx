@@ -90,7 +90,7 @@ function CreatePostPage() {
 
   return (
   <div className="w-full min-h-screen flex items-center justify-center p-4">
-  <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg mt-[-100px] p-6">
+  <div className="w-full max-w-2xl bg-white rounded-lg shadow-lg mt-[-40px] p-6">
    
     <div className="mb-6 text-center">
       <h1 className="text-3xl font-bold text-gray-800">Create a New Post</h1>
