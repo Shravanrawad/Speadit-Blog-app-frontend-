@@ -102,7 +102,7 @@ function SinglePostPage({ params }) {
   if (loading) return <SkeletonLoader />;
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-white text-black">
       <div className="flex flex-col lg:flex-row mb-8">
         <div className="lg:w-1/2 mb-4 lg:mb-0">
           <img

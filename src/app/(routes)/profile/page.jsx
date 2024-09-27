@@ -128,7 +128,7 @@ const ProfilePage = () => {
                             {post.username}
                           </h2>
                         </div>
-                        <h2 className='font-bold'>{post.title.substring(0, 25)}...</h2>
+                        <h2 className='font-bold text-black'>{post.title.substring(0, 25)}...</h2>
                         <h2 className='text-gray-500 text-sm'>{post.content.substring(0, 60)}...</h2>
                       </div>
 

@@ -62,7 +62,7 @@ const Editpage = ({ params }) => {
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center min-h-screen bg-white text-black">
       <div className="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md mt-[-100px]">
         <h1 className="text-3xl font-semibold text-center mb-6">Edit Post</h1>
         <form onSubmit={handleSubmit}>
